@@ -10,7 +10,7 @@
 </p>
 
 <% if daytime? %>
-    <img src="https://thumbs.dreamstime.com/b/blue-sky-clouds-sun-reflection-shines-bright-daytime-summer-163249190.jpg">
+    <img src="<%= asset_path 'day' %>">
 <% else %>
-    <img src="https://image.shutterstock.com/image-photo/beautiful-cloudscape-many-stars-night-260nw-723200575.jpg">
+    <%= image_tag 'night' %>
 <% end %>
