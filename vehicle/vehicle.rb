@@ -47,7 +47,7 @@ end
 class Coach < Vehicle
 
     def doors_count
-        6
+        4
     end
 
 end
