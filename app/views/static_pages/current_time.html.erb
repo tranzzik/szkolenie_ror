@@ -1,0 +1,16 @@
+<h1>Current time</h1>
+
+<p>
+
+    Aktualny czas:
+    <strong>
+        <%= @current_time %>
+    </strong>
+
+</p>
+
+<% if daytime? %>
+    <img src="https://thumbs.dreamstime.com/b/blue-sky-clouds-sun-reflection-shines-bright-daytime-summer-163249190.jpg">
+<% else %>
+    <img src="https://image.shutterstock.com/image-photo/beautiful-cloudscape-many-stars-night-260nw-723200575.jpg">
+<% end %>

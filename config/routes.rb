@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  get 'current_time', to: 'static_pages#current_time'
   get 'privacy', to: 'static_pages#privacy'
 end
