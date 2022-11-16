@@ -1,19 +1,19 @@
 databases:
-- name: nobleprog
-databaseName: nobleprog
-user: nobleprog
-plan: free
+  - name: nobleprog-production
+    databaseName: nobleprog
+    user: nobleprog
+    plan: free
 services:
-- type: web
-name: nobleprog
-env: ruby
-buildCommand: "./bin/render-build.sh"
-startCommand: "bundle exec puma -C config/puma.rb"
-plan: free
-envVars:
-- key: DATABASE_URL
-fromDatabase:
-name: nobleprog
-property: connectionString
-- key: RAILS_MASTER_KEY
-sync: false
+  - type: web
+    name: nobleprog
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nobleprog
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
