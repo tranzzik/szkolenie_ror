@@ -26,6 +26,12 @@
     <%= form.collection_select :user_id, User.all, :id, :email %>
   </div>
 
+  <div class="field">
+		<%= form.label :cover %>
+		<%= form.file_field :cover %>
+	</div>
+
+
   <div>
     <%= form.submit %>
   </div>
