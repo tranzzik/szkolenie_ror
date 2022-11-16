@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
+  before_action :check_authenticated, except: [:show, :index]
+
   # GET /posts or /posts.json
   def index
     @posts = Post.order(:title).
