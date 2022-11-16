@@ -2,6 +2,8 @@
 
 <h1>Posts</h1>
 
+<%= paginate @posts %>
+
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
@@ -12,3 +14,5 @@
 </div>
 
 <%= link_to "New post", new_post_path %>
+
+<%= paginate @posts %>
