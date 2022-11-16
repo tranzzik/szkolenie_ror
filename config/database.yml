@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+
   database: nobleprog_production
   username: nobleprog
   password: <%= ENV["NOBLEPROG_DATABASE_PASSWORD"] %>
